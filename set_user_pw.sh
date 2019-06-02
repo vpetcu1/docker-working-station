@@ -5,20 +5,14 @@ if [ -f /.user_pw_set ]; then
 	exit 0
 fi
 
-echo Copy "setting to /etc/skel"
+echo "Copy setting to /etc/skel"
 unzip -qq /home.zip -d /etc/skel
 
 useradd $REMOTE_USER -m -p '*' -d /home/$REMOTE_USER -s /bin/bash
-#useradd -m -d /PATH/TO/FOLDER USERNAME
-#adduser --disabled-password --gecos "" --quiet $REMOTE_USER
 adduser $REMOTE_USER sudo
 
 echo "=> Setting a password to the $REMOTE_USER user"
 echo "$REMOTE_USER:$REMOTE_PASSWORD" | chpasswd
-
-#echo "Add user $USER to docker group"
-#usermod -aG docker $REMOTE_USER
-
 
 echo "=> Done!"
 touch /.user_pw_set
