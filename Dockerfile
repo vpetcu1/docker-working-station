@@ -33,7 +33,7 @@ RUN apt-get install -y mate-terminal
 #install theme
 RUN apt-get install -y numix-blue-gtk-theme numix-icon-theme 
 #install zip 
-RUN apt-get install -y unzip
+RUN apt-get install -y zip unzip
 #install docking panel
 RUN apt-get install -y plank
 #install ping
