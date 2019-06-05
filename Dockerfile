@@ -36,6 +36,12 @@ RUN apt-get install -y numix-blue-gtk-theme numix-icon-theme
 RUN apt-get install -y unzip
 #install docking panel
 RUN apt-get install -y plank
+#install ping
+RUN apt-get install -y iputils-ping
+#install docking firefox
+RUN apt-get install -y firefox
+#install docking firefox
+RUN apt-get install -y mate-control-center
 
 
 # sshd stuff
