@@ -78,4 +78,4 @@ COPY ["home.zip", "/"]
 RUN chmod +x /*.sh
 
 EXPOSE 22
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/x2go-mate-base-entrypoint.sh"]
