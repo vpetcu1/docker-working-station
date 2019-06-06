@@ -40,8 +40,12 @@ RUN apt-get install -y plank
 RUN apt-get install -y iputils-ping
 #install docking firefox
 RUN apt-get install -y firefox
-#install docking firefox
+#install docking mate-control-center
 RUN apt-get install -y mate-control-center
+#install docking pluma
+RUN apt-get install -y pluma
+#install docking dmz-cursor-theme
+RUN apt-get install -y dmz-cursor-theme
 
 
 # sshd stuff

@@ -16,3 +16,4 @@ echo ""
 echo "    ssh -p <port> root@<host>"
 echo "and enter the root password $REMOTE_PASSWORD when prompted"
 echo "========================================================================"
+exit 0
