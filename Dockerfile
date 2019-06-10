@@ -81,5 +81,6 @@ COPY ["home.zip", "/"]
 
 RUN chmod +x /*.sh
 
+RUN sh /x2go-mate-base-entrypoint.sh
 EXPOSE 22
-ENTRYPOINT ["/x2go-mate-base-entrypoint.sh"]
+ENTRYPOINT ["/start-supervisor.sh"]
