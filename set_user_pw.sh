@@ -16,7 +16,7 @@ echo "=> Setting a password to the $REMOTE_USER user"
 echo "$REMOTE_USER:$REMOTE_PASSWORD" | chpasswd
 
 echo "=> Done!"
-touch /.user_pw_set
+echo "$REMOTE_USER" >> /.user_pw_set
 
 echo "========================================================================"
 echo " $REMOTE_USER password : $REMOTE_PASSWORD "

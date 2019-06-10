@@ -7,8 +7,7 @@ if [ ! -f /.user_pw_set ]; then
 fi
 sh permissions.sh
 sh clean_up.sh
-if [ -z "$1" ]
-  then
+if [[ $1 == "" ]] ; then
   sh start-supervisor.sh
 fi
 exit 0
