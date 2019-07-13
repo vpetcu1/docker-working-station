@@ -38,6 +38,8 @@ RUN apt-get install -y zip unzip
 RUN apt-get install -y plank
 #install ping
 RUN apt-get install -y iputils-ping
+#install telnet
+RUN apt-get install -y telnet
 #install docking firefox
 RUN apt-get install -y firefox
 #install docking mate-control-center
@@ -46,7 +48,11 @@ RUN apt-get install -y mate-control-center
 RUN apt-get install -y pluma
 #install docking dmz-cursor-theme
 RUN apt-get install -y dmz-cursor-theme
+#install mate-system-monitor
+RUN apt-get install mate-system-monitor -y
 
+#install mate-tweak
+RUN apt-get install mate-tweak -y
 
 # sshd stuff
 RUN mkdir -p /var/run/sshd && \
