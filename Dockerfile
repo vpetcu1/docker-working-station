@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.10
 MAINTAINER Vasilica Petcu <vpetcu1@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
