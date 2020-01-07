@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:18.04
 MAINTAINER Vasilica Petcu <vpetcu1@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -42,6 +42,8 @@ RUN apt-get install -y iputils-ping
 RUN apt-get install -y telnet
 #install docking firefox
 RUN apt-get install -y firefox
+#install docking chromium-browser
+RUN apt-get install -y chromium-browser
 #install docking mate-control-center
 RUN apt-get install -y mate-control-center
 #install docking pluma
@@ -83,7 +85,7 @@ ENV REMOTE_PASSWORD=password
 #copy necessary to configure workingstation
 COPY ["*.conf", "/etc/supervisor/conf.d/"]
 COPY ["*.sh", "/"]
-COPY ["home.zip", "/"]
+COPY ["home.zip", "/home.zip"]
 
 RUN chmod +x /*.sh
 
