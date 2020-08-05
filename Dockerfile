@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Vasilica Petcu <vpetcu1@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -20,8 +20,13 @@ RUN apt-get update -y -qq && \
     apt-get install -y supervisor openssh-server
 
 # add x2go repositoires
-RUN add-apt-repository ppa:x2go/stable && apt-get update -y -qq
+RUN add-apt-repository ppa:x2go/ppa && apt-get update -y -qq
+#RUN add-apt-repository ppa:x2go/stable && apt-get update -y -qq
+#RUN sh -c 'echo "deb http://ppa.launchpad.net/x2go/stable/ubuntu bionic main" >> x2go-ubuntu-stable-bionic.list'
+#RUN add-apt-repository "deb http://ppa.launchpad.net/x2go/stable/ubuntu bionic main"
+RUN apt-get update -y -qq
 
+#RUN apt-cache search x2go
 # install x2go with mate bingings
 RUN apt-get install -y x2goserver x2goserver-xsession x2gomatebindings
 
@@ -43,7 +48,7 @@ RUN apt-get install -y telnet
 #install docking firefox
 RUN apt-get install -y firefox
 #install docking chromium-browser
-RUN apt-get install -y chromium-browser
+#RUN snap install chromium
 #install docking mate-control-center
 RUN apt-get install -y mate-control-center
 #install docking pluma
